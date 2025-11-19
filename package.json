@@ -22,7 +22,10 @@
   "dependencies": {
     "@types/express": "^5.0.5",
     "@types/node": "^24.10.0",
-    "express": "^5.1.0"
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^8.20.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.10",
