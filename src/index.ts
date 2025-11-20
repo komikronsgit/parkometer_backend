@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 
 import router from './router';
+import { initializeDefaultData } from './defaultData';
 
 const app: Application = exspress();
 app.use(bodyParser.json());
@@ -15,5 +16,7 @@ mongoose.connect('mongodb://localhost:27017/parkometer_db').then(() => {
 }).catch((error) => {
   console.error(error);
 });
+
+initializeDefaultData();
 
 app.use('/', router);

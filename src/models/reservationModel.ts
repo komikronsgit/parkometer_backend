@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-export default mongoose.model("Reservation", new mongoose.Schema({
+export default mongoose.model("reservations", new mongoose.Schema({
   username: {
     type: String,
     required: false
