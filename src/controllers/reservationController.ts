@@ -12,6 +12,29 @@ export const getReservations = async (req: Request, res: Response) => {
   }
 };
 
+export const getReservationsByUsername = async (req: Request, res: Response) => {
+  try {
+    const username = req.params.username;
+    const data = await Reservation.find({ username });
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json({ message: "Server Error", error });
+  }
+};
+
+export const getAvailableReservations = async (req: Request, res: Response) => {
+  try {
+    const currentDate = new Date();
+    const data = await Reservation.find({ $and: [ 
+      { startDateTime: { $lt: currentDate } },
+      { endDateTime: { $gt: currentDate } }
+    ] });
+    res.status(200).json(data);
+  } catch (error) {
+    res.status(500).json({ message: "Server Error", error });
+  }
+};
+
 export const postReservation = async (req: Request, res: Response) => {
   try {
     const data = new Reservation(req.body);
@@ -27,7 +50,7 @@ export const postReservation = async (req: Request, res: Response) => {
   }
 };
 
-export const deleteReservation = async (req: Request, res: Response) => {
+export const deleteReservationById = async (req: Request, res: Response) => {
   try {
     const id = req.params.id;
     const data = await Reservation.findById(id);

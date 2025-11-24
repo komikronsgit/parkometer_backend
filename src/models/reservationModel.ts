@@ -3,18 +3,18 @@ import mongoose from "mongoose";
 export default mongoose.model("reservations", new mongoose.Schema({
   username: {
     type: String,
-    required: false
+    required: true
   },
   lot: {
     type: String,
     required: true
   },
-  time: {
-    type: String,
+  startDateTime: {
+    type: Date,
     required: true
   },
-  date: {
-    type: String,
+  endDateTime: {
+    type: Date,
     required: true
-  },
+  }
 }));
