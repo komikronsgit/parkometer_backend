@@ -4,8 +4,9 @@ import User from "../models/userModel";
 
 export const confirmPassword = async (req: Request, res: Response) => {
   try {
-    const { username, password } = req.body;
-    const userData = await User.findOne({ username, password });
+    console.log(`Request Body: ${JSON.stringify(req.body)}`);
+    const { name, password } = req.body;
+    const userData = await User.findOne({ name, password });
     if (!userData) {
       return res.status(401).json({ message: "Invalid credentials" });
     }
@@ -17,9 +18,9 @@ export const confirmPassword = async (req: Request, res: Response) => {
 
 export const postUser = async (req: Request, res: Response) => {
   try {
-    const data = new User(req.body);
-    const userData = await User.findOne({ username: data.username });
-    if (!userData) {
+    const data = new User(req.body);;
+    const userData = await User.findOne({ name: data.name });
+    if (userData) {
       return res.status(404).json({ message: "User already exist" });
     }
     const saveData = await data.save();

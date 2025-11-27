@@ -1,6 +1,7 @@
 import exspress, { Application, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
+import cors from 'cors';
 
 import router from './router';
 import { initializeDefaultData } from './defaultData';
@@ -19,4 +20,5 @@ mongoose.connect('mongodb://localhost:27017/parkometer_db').then(() => {
 
 initializeDefaultData();
 
+app.use(cors());
 app.use('/', router);

@@ -2,7 +2,7 @@ import e from "express";
 import mongoose from "mongoose";
 
 export default mongoose.model("users", new mongoose.Schema({
-  username: {
+  name: {
     type: String,
     required: true,
   },
@@ -14,11 +14,11 @@ export default mongoose.model("users", new mongoose.Schema({
     type: String,
     required: true,
   },
-  phonenumber: {
+  phone: {
     type: String,
     required: true,
   },
-  licenseplate: {
+  plate: {
     type: String,
     required: true,
   }

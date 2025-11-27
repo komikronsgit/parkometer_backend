@@ -20,7 +20,7 @@ router.delete('/reservations/:id', deleteReservationById);
 router.get('/lots', getLots);
 router.post('/lots', postLot);
 
-router.get('/users/confirm', confirmPassword);
+router.post('/users/confirm', confirmPassword);
 router.post('/users', postUser);
 
 export default router;
