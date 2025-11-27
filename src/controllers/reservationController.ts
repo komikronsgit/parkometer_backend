@@ -40,7 +40,7 @@ export const postReservation = async (req: Request, res: Response) => {
     const data = new Reservation(req.body);
     const lotData = await Lot.findOne({ name: data.lot });
     if (!lotData) {
-      return res.status(404).json({ message: "Lot does not exist" });
+      return res.status(404).json({ message: "Lot already exists" });
     }
     await Lot.findOneAndUpdate({ name: data.lot }, { available: lotData.available - 1 });
     const saveData = await data.save();

@@ -1,0 +1,25 @@
+import e from "express";
+import mongoose from "mongoose";
+
+export default mongoose.model("users", new mongoose.Schema({
+  username: {
+    type: String,
+    required: true,
+  },
+  password: {
+    type: String,
+    required: true,
+  },
+  email: {
+    type: String,
+    required: true,
+  },
+  phonenumber: {
+    type: String,
+    required: true,
+  },
+  licenseplate: {
+    type: String,
+    required: true,
+  }
+}));
