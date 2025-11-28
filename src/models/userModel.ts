@@ -16,10 +16,10 @@ export default mongoose.model("users", new mongoose.Schema({
   },
   phone: {
     type: String,
-    required: true,
+    required: false,
   },
   plate: {
     type: String,
-    required: true,
+    required: false,
   }
 }));
