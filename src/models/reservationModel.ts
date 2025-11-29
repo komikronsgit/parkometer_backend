@@ -5,15 +5,19 @@ export default mongoose.model("reservations", new mongoose.Schema({
     type: String,
     required: true
   },
-  lot: {
+  lotName: {
     type: String,
     required: true
   },
-  startDateTime: {
+  destination: {
+    type: String,
+    required: true
+  },
+  startTime: {
     type: Date,
     required: true
   },
-  endDateTime: {
+  endTime: {
     type: Date,
     required: true
   }

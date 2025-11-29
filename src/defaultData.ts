@@ -3,6 +3,7 @@ import Reservation from "./models/reservationModel";
 
 export const initializeDefaultData = async () => {
   try {
+    /*
     const defaultLots = [
       { name: "Lot A", totalSpaces: 100, available: 100 },
       { name: "Lot B", totalSpaces: 80, available: 80 },
@@ -31,7 +32,7 @@ export const initializeDefaultData = async () => {
         await newReservation.save();
       }
     });
-
+    */
     console.log('Default data initialized');
   } catch (error) {
     console.error('Error initializing default data:', error);
