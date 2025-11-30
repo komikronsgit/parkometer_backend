@@ -5,7 +5,7 @@ export default mongoose.model("lots", new mongoose.Schema({
     type: String,
     required: true
   },
-  availableLots: {
+  availableSpaces: {
     type: Number,
     required: true
   },

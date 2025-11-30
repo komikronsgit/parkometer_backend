@@ -5,7 +5,8 @@ import {
   getReservationsByUsername, 
   getAvailableReservations,
   postReservation, 
-  deleteReservationById
+  deleteReservationById,
+  putStartAndEndTimeById
 } from './controllers/reservationController';
 
 import { getLots, postLot } from './controllers/lotController';
@@ -21,6 +22,7 @@ router.get('/reservations/user/:username', getReservationsByUsername);
 router.get('/reservations/available', getAvailableReservations);
 router.post('/reservations', postReservation);
 router.delete('/reservations/:id', deleteReservationById);
+router.put('/reservations/:id', putStartAndEndTimeById);
 
 // === Lots ===
 router.get('/lots', getLots);
@@ -30,7 +32,7 @@ router.post('/lots', postLot);
 router.post('/users/confirm', confirmPassword);
 router.post('/users', postUser);
 
-// === 🆕 Spots ===
+// === Spots ===
 router.get('/spots', getSpots);
 router.post('/spots', addSpot);
 
