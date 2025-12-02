@@ -8,6 +8,8 @@ const spotSchema = new mongoose.Schema({
   timingTo: { type: String },
   isPaid: { type: Boolean, default: false },
   pricePerHour: { type: Number },
+  lat: { type: Number, required: true },
+  lng: { type: Number, required: true },
   createdBy: { type: String },
   createdAt: { type: Date, default: Date.now }
 });

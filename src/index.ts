@@ -4,24 +4,24 @@ import mongoose from "mongoose";
 import cors from "cors";
 
 import router from "./router";
-import { initializeDefaultData } from "./defaultData";
+import { initializeDefaultData } from "./models/defaultData";
 
 const app: Application = express();
 
-//  Middleware
+// Middleware
 app.use(cors());
 app.use(bodyParser.json());
 
-//  MongoDB Connection
+// MongoDB Connection
 mongoose
   .connect("mongodb://localhost:27017/parkometer_db")
   .then(async () => {
     console.log("✅ Connected to MongoDB");
 
-    // Initialize default lots and reservations *after* DB is ready
+    // Initialize default data
     await initializeDefaultData();
 
-    // Start server only after initialization
+    // Start server
     app.listen(3000, () => {
       console.log("🚀 Server running on port 3000");
     });
@@ -30,9 +30,8 @@ mongoose
     console.error("❌ Database connection error:", error);
   });
 
-//  Register routes
+// Routes
 app.use("/", router);
-
 
 app.get("/", (req: Request, res: Response) => {
   res.send("Parkometer API is running 🚗");
