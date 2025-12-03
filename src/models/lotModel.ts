@@ -5,6 +5,10 @@ export default mongoose.model("lots", new mongoose.Schema({
     type: String,
     required: true
   },
+  description: {
+    type: String,
+    required: true
+  },
   lat: {
     type: Number,
     required: true
