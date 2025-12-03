@@ -4,9 +4,9 @@ import Reservation from "./models/reservationModel";
 export const initializeDefaultData = async () => {
   try {
     const defaultLots = [
-      { name: "Lot A", availableSpaces: 12, distance: '2 min' },
-      { name: "Lot B", availableSpaces: 4, distance: '5 min' },
-      { name: "Lot C", availableSpaces: 20, distance: '1 min' },
+      { name: "Lot A", availableSpaces: 12, totalSpaces: 12, distance: '2 min' },
+      { name: "Lot B", availableSpaces: 4, totalSpaces: 4, distance: '5 min' },
+      { name: "Lot C", availableSpaces: 20,  totalSpaces: 20, distance: '1 min' },
     ];
 
     defaultLots.forEach(async (lot) => {

@@ -46,7 +46,6 @@ export const postReservation = async (req: Request, res: Response) => {
     if (!lotData) {
       return res.status(404).json({ message: "Lot doesn't exists" });
     }
-    await Lot.findOneAndUpdate({ name: data.lotName }, { available: lotData.availableSpaces - 1 });
     const saveData = await data.save();
     res.status(201).json(saveData);
   } catch (error) {
@@ -61,8 +60,6 @@ export const deleteReservationById = async (req: Request, res: Response) => {
     if (!data) {
       return res.status(404).json({ message: "Reservation not found" });
     }
-    const lotData = await Lot.findOne({ name: data.lotName });
-    await Lot.findOneAndUpdate({ name: data.lotName }, { available: lotData!.availableSpaces + 1 });
     const deletedData = await Reservation.findByIdAndDelete(id);
     res.status(200).json(deletedData);
   } catch (error) {
