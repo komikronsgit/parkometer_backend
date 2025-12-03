@@ -1,13 +1,19 @@
 import Lot from "./models/lotModel";
-import Reservation from "./models/reservationModel";
+import lotData from "./lotData.json";
+
+interface LotData {
+  name: string;
+  description: string;
+  lat: number;
+  lng: number;
+  totalSpace: number;
+  availableSpace: number;
+  handicapParking: string;
+}
 
 export const initializeDefaultData = async () => {
   try {
-    const defaultLots = [
-      { name: "Lot A", availableSpaces: 12, totalSpaces: 12, distance: '2 min' },
-      { name: "Lot B", availableSpaces: 4, totalSpaces: 4, distance: '5 min' },
-      { name: "Lot C", availableSpaces: 20,  totalSpaces: 20, distance: '1 min' },
-    ];
+    const defaultLots: LotData[] = lotData;
 
     defaultLots.forEach(async (lot) => {
       const existingLot = await Lot.findOne({ name: lot.name });

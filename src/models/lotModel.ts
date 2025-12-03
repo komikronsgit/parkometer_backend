@@ -5,15 +5,23 @@ export default mongoose.model("lots", new mongoose.Schema({
     type: String,
     required: true
   },
-  availableSpaces: {
+  lat: {
     type: Number,
     required: true
   },
-  totalSpaces: {
+  lng: {
     type: Number,
     required: true
   },
-  distance: {
+  availableSpace: {
+    type: Number,
+    required: true
+  },
+  totalSpace: {
+    type: Number,
+    required: true
+  },
+  handicapParking: {
     type: String,
     required: true
   }

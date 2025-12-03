@@ -15,9 +15,7 @@ export const getLots = async (req: Request, res: Response) => {
           startTime: { $lt: now },
           endTime: { $gt: now },
         });
-        lot.availableSpaces = lot.totalSpaces - activeReservations;
-        console.log(now);
-        console.log(activeReservations);
+        lot.availableSpace = lot.totalSpace - activeReservations;
         await lot.save();
       })
     );
