@@ -17,10 +17,11 @@ export const initializeDefaultData = async () => {
 
     defaultLots.forEach(async (lot) => {
       const existingLot = await Lot.findOne({ name: lot.name });
-      if (!existingLot) {
-        const newLot = new Lot(lot);
-        await newLot.save();
+      if (existingLot) {
+        await Lot.deleteMany({ name: lot.name });
       }
+      const newLot = new Lot(lot);
+      await newLot.save();
     });
     
     console.log('Default data initialized');
