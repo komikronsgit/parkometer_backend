@@ -14,12 +14,9 @@ interface LotData {
 export const initializeDefaultData = async () => {
   try {
     const defaultLots: LotData[] = lotData;
-
+    await Lot.deleteMany();
     defaultLots.forEach(async (lot) => {
       const existingLot = await Lot.findOne({ name: lot.name });
-      if (existingLot) {
-        await Lot.deleteMany({ name: lot.name });
-      }
       const newLot = new Lot(lot);
       await newLot.save();
     });
