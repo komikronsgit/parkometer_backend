@@ -1,6 +1,19 @@
 import { Request, Response } from "express";
 import Lot from "../models/lotModel";
 import Reservation from "../models/reservationModel";
+import fs from "fs";
+import path from "path";
+
+// ========== Helper: Sync lotData.json ==========
+const updateLotDataFile = async () => {
+  try {
+    const lots = await Lot.find();
+    const filePath = path.join(__dirname, "..", "lotData.json");
+    fs.writeFileSync(filePath, JSON.stringify(lots, null, 2));
+  } catch (error) {
+    console.error("Error writing lotData.json:", error);
+  }
+};
 
 // ========== GET ALL PARKING LOTS ==========
 export const getLots = async (req: Request, res: Response) => {
@@ -34,6 +47,7 @@ export const postLot = async (req: Request, res: Response) => {
   try {
     const data = new Lot(req.body);
     const saveData = await data.save();
+    await updateLotDataFile(); // ✅ sync file
     res.status(201).json(saveData);
 
   } catch (error) {
@@ -55,6 +69,7 @@ export const updateLot = async (req: Request, res: Response) => {
     }
 
     res.status(200).json(updated);
+    await updateLotDataFile(); // ✅ sync file
 
   } catch (error) {
     res.status(500).json({ message: "Server Error", error });
@@ -71,6 +86,7 @@ export const deleteLot = async (req: Request, res: Response) => {
     }
 
     res.status(200).json({ message: "Lot deleted successfully" });
+    await updateLotDataFile(); // ✅ sync file
 
   } catch (error) {
     res.status(500).json({ message: "Server Error", error });
