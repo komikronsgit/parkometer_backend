@@ -1,54 +1,21 @@
 [
   {
-    "_id": "6930e6fadfc23e6a2a560967",
-    "name": "Right Entrance Parking Lot",
-    "description": "The parking lot is beside the GO bus stop and has a 5-minute walk to the J Wing building and an 8-minute walk to the S Wing building.",
-    "lat": 43.470258,
-    "lng": -79.697635,
-    "availableSpace": 8,
-    "totalSpace": 8,
-    "handicapParking": "Yes",
-    "__v": 0
-  },
-  {
-    "_id": "6930e6fadfc23e6a2a56096b",
-    "name": "Athletics Parking Lot (1)",
-    "description": "The parking lot is right beside the Sheridan Athletics building.",
-    "lat": 43.467159,
-    "lng": -79.702528,
-    "availableSpace": 8,
-    "totalSpace": 8,
-    "handicapParking": "No",
-    "__v": 0
-  },
-  {
-    "_id": "6930e6fadfc23e6a2a56096d",
-    "name": "Athletics Parking Lot (2)",
-    "description": "The parking lot is right beside the Sheridan Athletics building.",
-    "lat": 43.468182,
-    "lng": -79.703432,
-    "availableSpace": 8,
-    "totalSpace": 8,
-    "handicapParking": "Yes",
-    "__v": 0
-  },
-  {
-    "_id": "6930e6fadfc23e6a2a560971",
-    "name": "AA Wing Parking Lot",
-    "description": "The parking lot is a 1-minute walk to the AA Wing building.",
-    "lat": 43.469014,
-    "lng": -79.702348,
-    "availableSpace": 8,
-    "totalSpace": 8,
-    "handicapParking": "No",
-    "__v": 0
-  },
-  {
     "_id": "6930e6fadfc23e6a2a560973",
     "name": "Main Entrance Parking Lot",
     "description": "The parking lot is a 3-minute walk to the main school entrance. It also leads to the D Wing building.",
     "lat": 43.469887,
     "lng": -79.700785,
+    "availableSpace": 8,
+    "totalSpace": 8,
+    "handicapParking": "Yes",
+    "__v": 0
+  },
+  {
+    "_id": "6930e6fadfc23e6a2a560975",
+    "name": "Left Entrance Parking Lot",
+    "description": "The parking lot is beside the Oakville Transit bus stop and has an 8-minute walk to the S Wing building.",
+    "lat": 43.469532,
+    "lng": -79.697109,
     "availableSpace": 8,
     "totalSpace": 8,
     "handicapParking": "Yes",
@@ -66,14 +33,47 @@
     "__v": 0
   },
   {
-    "_id": "6930e6fadfc23e6a2a560975",
-    "name": "Left Entrance Parking Lot",
-    "description": "The parking lot is beside the Oakville Transit bus stop and has an 8-minute walk to the S Wing building.",
-    "lat": 43.469532,
-    "lng": -79.697109,
+    "_id": "6930e6fadfc23e6a2a56096d",
+    "name": "Athletics Parking Lot (2)",
+    "description": "The parking lot is right beside the Sheridan Athletics building.",
+    "lat": 43.468182,
+    "lng": -79.703432,
     "availableSpace": 8,
     "totalSpace": 8,
     "handicapParking": "Yes",
+    "__v": 0
+  },
+  {
+    "_id": "6930e6fadfc23e6a2a560967",
+    "name": "Right Entrance Parking Lot",
+    "description": "The parking lot is beside the GO bus stop and has a 5-minute walk to the J Wing building and an 8-minute walk to the S Wing building.",
+    "lat": 43.470258,
+    "lng": -79.697635,
+    "availableSpace": 8,
+    "totalSpace": 8,
+    "handicapParking": "Yes",
+    "__v": 0
+  },
+  {
+    "_id": "6930e6fadfc23e6a2a560971",
+    "name": "AA Wing Parking Lot",
+    "description": "The parking lot is a 1-minute walk to the AA Wing building.",
+    "lat": 43.469014,
+    "lng": -79.702348,
+    "availableSpace": 8,
+    "totalSpace": 8,
+    "handicapParking": "No",
+    "__v": 0
+  },
+  {
+    "_id": "6930e6fadfc23e6a2a56096b",
+    "name": "Athletics Parking Lot (1)",
+    "description": "The parking lot is right beside the Sheridan Athletics building.",
+    "lat": 43.467159,
+    "lng": -79.702528,
+    "availableSpace": 8,
+    "totalSpace": 8,
+    "handicapParking": "No",
     "__v": 0
   }
 ]
