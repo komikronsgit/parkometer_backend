@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  staging:
+    build: .
+    container_name: parkometer-backend-staging
+    ports:
+      - "5000:3000"
+    environment:
+      NODE_ENV: staging
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  production:
+    build: .
+    container_name: parkometer-backend-production
+    ports:
+      - "6000:3000"
+    environment:
+      NODE_ENV: production
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
