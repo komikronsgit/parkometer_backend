@@ -1,0 +1,25 @@
+name: Production Deployment
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  production:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t parkometer-backend .
+
+      - name: Run production container
+        run: |
+          docker run -d -p 6000:3000 --name parkometer-production parkometer-backend
+          sleep 10
+
+      - name: Health check
+        run: curl --fail http://localhost:6000/health

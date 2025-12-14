@@ -3,34 +3,36 @@
   "version": "1.0.0",
   "description": "backend for capstone project",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.ts"
+    "start": "nodemon src/index.ts",
+    "dev": "nodemon src/index.ts",
+    "test": "jest --runInBand"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/komikronsgit/parkometer_backend.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/komikronsgit/parkometer_backend/issues"
   },
   "homepage": "https://github.com/komikronsgit/parkometer_backend#readme",
   "dependencies": {
-    "@types/express": "^5.0.5",
-    "@types/node": "^24.10.0",
     "body-parser": "^2.2.0",
     "cors": "^2.8.5",
     "express": "^5.1.0",
-    "mongodb": "^7.0.0",
     "mongoose": "^8.20.0"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.10.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.2.0",
     "nodemon": "^3.1.10",
+    "supertest": "^7.1.4",
+    "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
