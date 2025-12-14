@@ -1,0 +1,25 @@
+name: Staging Deployment
+
+on:
+  push:
+    branches:
+      - staging
+
+jobs:
+  staging:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t parkometer-backend .
+
+      - name: Run staging container
+        run: |
+          docker run -d -p 5000:3000 --name parkometer-staging parkometer-backend
+          sleep 10
+
+      - name: Health check
+        run: curl --fail http://localhost:5000/health
