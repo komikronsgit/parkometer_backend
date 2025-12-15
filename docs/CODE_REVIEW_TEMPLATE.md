@@ -72,9 +72,13 @@
 
 
 ### ✅ Approved Items
-| Item | Notes |
-|------|-------|
-| | |
+|         Item        | Notes |
+|---------------------|-------|
+|      test files     |       |
+|---------------------|-------|
+| github actions fils |       |
+|---------------------|-------|
+|     docker files    |       |
 
 
 ### ⚠️ Suggestions (Non-blocking)
@@ -86,7 +90,7 @@
 ### ❌ Required Changes (Blocking)
 | File:Line | Issue | Severity |
 |-----------|-------|----------|
-| | | High/Medium/Low |
+|           |       |          |
 
 
 ---
