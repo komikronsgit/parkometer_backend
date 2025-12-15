@@ -1,11 +1,11 @@
 # Code Review Template
 
 
-**PR Title:** [Title of the Pull Request]  
+**PR Title:** [Add docker, docker-compose, and CI/CD workflows]  
 **PR Link:** [URL]  
-**Author:** [Name]  
-**Reviewer:** [Name]  
-**Date:** [YYYY-MM-DD]  
+**Author:** [Bilal, Tachukwa]  
+**Reviewer:** [Kalvin]
+**Date:** [2025-12-14]  
 **Branch:** [feature-branch] → [target-branch]
 
 
@@ -16,12 +16,11 @@
 
 
 **Summary of Changes:**
-> [Brief description of what this PR accomplishes]
+> added docker and testing
 
 
 **Related Issues/Tickets:**
-- [ ] Issue #___: [Description]
-- [ ] Issue #___: [Description]
+- [✓] Issue #1: [no test for availableSpace updating]
 
 
 ---
@@ -31,39 +30,39 @@
 
 
 ### Functionality
-- [ ] Code accomplishes the stated purpose
-- [ ] Edge cases are handled appropriately
-- [ ] Error handling is implemented correctly
-- [ ] No obvious bugs or logic errors
+- [✓] Code accomplishes the stated purpose
+- [✓] Edge cases are handled appropriately
+- [✓] Error handling is implemented correctly
+- [✓] No obvious bugs or logic errors
 
 
 ### Code Standards
 - [ ] Follows project naming conventions
-- [ ] Functions are small and focused (single responsibility)
+- [✓] Functions are small and focused (single responsibility)
 - [ ] No hardcoded values (uses constants/environment variables)
-- [ ] No commented-out code left in
-- [ ] No debug statements left in (console.log, print, etc.)
+- [✓] No commented-out code left in
+- [✓] No debug statements left in (console.log, print, etc.)
 
 
 ### Documentation
 - [ ] Functions have appropriate comments where needed
 - [ ] Complex logic is explained with inline comments
-- [ ] README updated if new features added
+- [✓] README updated if new features added
 - [ ] API documentation updated if endpoints changed
 
 
 ### Testing
 - [ ] Unit tests added for new functionality
-- [ ] Existing tests still pass
+- [✓] Existing tests still pass
 - [ ] Edge cases covered in tests
-- [ ] Test names clearly describe what is being tested
+- [✓] Test names clearly describe what is being tested
 
 
 ### Security
-- [ ] No sensitive data exposed (passwords, keys, tokens)
-- [ ] Input validation implemented
-- [ ] No SQL injection vulnerabilities
-- [ ] No XSS vulnerabilities
+- [✓] No sensitive data exposed (passwords, keys, tokens)
+- [✓] Input validation implemented
+- [✓] No SQL injection vulnerabilities
+- [✓] No XSS vulnerabilities
 
 
 ---
@@ -79,9 +78,9 @@
 
 
 ### ⚠️ Suggestions (Non-blocking)
-| File:Line | Suggestion |
-|-----------|------------|
-| | |
+| File:Line |     Suggestion      |
+|-----------|---------------------|
+| tests:all | add inline comments |
 
 
 ### ❌ Required Changes (Blocking)
@@ -97,15 +96,15 @@
 
 
 ### Tests Run
-- [ ] Unit tests - Passed ✅ / Failed ❌
-- [ ] Integration tests - Passed ✅ / Failed ❌
-- [ ] Linting - Passed ✅ / Failed ❌
+- [✅] Unit tests - Passed ✅ / Failed ❌
+- [✅] Integration tests - Passed ✅ / Failed ❌
+- [✅] Linting - Passed ✅ / Failed ❌
 
 
 ### Manual Testing
-- [ ] Feature tested locally
-- [ ] Tested in staging environment (if applicable)
-- [ ] No regressions observed
+- [✓] Feature tested locally
+- [✓] Tested in staging environment (if applicable)
+- [✓] No regressions observed
 
 
 ---
@@ -114,11 +113,11 @@
 ## 5. Final Decision
 
 
-**Decision:** [ ] APPROVED / [ ] REQUEST CHANGES / [ ] NEEDS DISCUSSION
+**Decision:** [✓] APPROVED / [ ] REQUEST CHANGES / [ ] NEEDS DISCUSSION
 
 
 **Comments:**
-> [Final thoughts or conditions for approval]
+> [improve documntation other then that fine]
 
 
 ---

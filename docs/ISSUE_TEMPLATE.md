@@ -9,25 +9,25 @@
 
 | Field | Value |
 |-------|-------|
-| **Issue ID** | PROJ-### |
-| **Title** | [Brief, descriptive title] |
-| **Type** | 🐛 Bug / ✨ Feature / 🔧 Enhancement / 📝 Documentation |
-| **Priority** | 🔴 Critical / 🟠 High / 🟡 Medium / 🟢 Low |
-| **Status** | 📋 Backlog / 🔄 In Progress / 👀 In Review / ✅ Done |
-| **Assignee** | [Name] |
-| **Reporter** | [Name] |
-| **Created Date** | [YYYY-MM-DD] |
-| **Due Date** | [YYYY-MM-DD] |
+| **Issue ID** | Issue #1 |
+| **Title** | [no test for availableSpace updating] |
+| **Type** | ✨ Feature |
+| **Priority** | 🟢 Low |
+| **Status** | 📋 Backlog |
+| **Assignee** | [Bilal, Tachukwa] |
+| **Reporter** | [Kalvin] |
+| **Created Date** | [2025-12-14] |
+| **Due Date** | [9999-12-31] |
 
 
 ---
 
 
 ## Description
-
+missing test for imprtant feature
 
 ### Summary
-> [One-paragraph description of the issue]
+> [there is curantly no way of autaomaticl knowing if the critical feture of the availableSpace automaticly updating, stoll works after every update]
 
 
 ### For Bugs: Steps to Reproduce
@@ -37,15 +37,15 @@
 
 
 ### Expected Behavior
-> [What should happen]
+> [when the test are run there shuld be a test for seeing if availableSpace is automaticly updating]
 
 
 ### Actual Behavior
-> [What actually happens]
+> [it is not]
 
 
 ### For Features: User Story
-> As a [type of user], I want [goal] so that [benefit].
+> As a developer, I want be able to autamaticly test if availableSpace is automaticly updating so that i dont have to do it manualy.
 
 
 ---
@@ -59,7 +59,7 @@
 - [ ] Backend API
 - [ ] Database
 - [ ] Docker/Deployment
-- [ ] CI/CD Pipeline
+- [✓] CI/CD Pipeline
 
 
 ### Error Messages/Logs
@@ -74,9 +74,7 @@
 ## Acceptance Criteria
 
 
-- [ ] Criterion 1: [Specific, measurable outcome]
-- [ ] Criterion 2: [Specific, measurable outcome]
-- [ ] Criterion 3: [Specific, measurable outcome]
+- [✓] Criterion 1: [the functions correctly passes and fails programs with scripted outputs]
 
 
 ---
@@ -86,15 +84,15 @@
 
 
 ### Solution Implemented
-> [Description of how the issue was resolved]
+> [create functions for each way the number can be incremented or decremented where it measures the value then takes the action then mesures again]
 
 
 ### Pull Request(s)
-- PR #___: [Title]
+- PR #1: [Add docker, docker-compose, and CI/CD workflows]
 
 
 ### Resolution Date
-[YYYY-MM-DD]
+[9999-12-31]
 
 
 ---
@@ -111,7 +109,7 @@
 **Steps:** 1. ... 2. ... 3. ...
 **Expected:** [What should happen]
 **Actual:** [What happens]
-**Severity:** Critical / High / Medium / Low
+**Severity:** Low
 ```
 
 
@@ -119,11 +117,10 @@
 
 
 ```
-**Feature:** [One line description]
-**User Story:** As a [user], I want [goal] so that [benefit]
+**Feature:** [test if availableSpace is automaticly updating]
+**User Story:** As a developer, I want be able to autamaticly test if availableSpace is automaticly updating so that i dont have to do it manualy.
 **Acceptance Criteria:**
-- [ ] ...
-- [ ] ...
+- [ ] the functions correctly passes and fails programs with scripted outputs
 ```
 
 
