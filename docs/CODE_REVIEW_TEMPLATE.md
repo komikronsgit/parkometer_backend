@@ -1,131 +1,95 @@
 # Code Review Template
 
-
-**PR Title:** [Add docker, docker-compose, and CI/CD workflows]  
-**PR Link:** [URL]  
-**Author:** [Bilal, Tachukwa]  
-**Reviewer:** [Kalvin]
-**Date:** [2025-12-14]  
-**Branch:** [feature-branch] → [target-branch]
-
+**PR Title:** Add Docker, docker-compose, and CI/CD workflows  
+**PR Link:** PR #1  
+**Author:** Bilal, Tachukwa  
+**Reviewer:** Kalvin  
+**Date:** 2025-12-14  
+**Branch:** feature/devops-docker-actions → staging  
 
 ---
-
 
 ## 1. Overview
 
+**Summary of Changes:**  
+Added Docker and docker-compose configuration, CI/CD workflows, and automated backend tests.
 
-**Summary of Changes:**
-> added docker and testing
-
-
-**Related Issues/Tickets:**
-- [✓] Issue #1: [no test for availableSpace updating]
-
+**Related Issues/Tickets:**  
+- [✓] Issue #1: Missing automated test for availableSpace auto-updating
 
 ---
-
 
 ## 2. Code Quality Checklist
 
-
 ### Functionality
-- [✓] Code accomplishes the stated purpose
-- [✓] Edge cases are handled appropriately
-- [✓] Error handling is implemented correctly
-- [✓] No obvious bugs or logic errors
-
+- [✓] Code accomplishes the stated purpose  
+- [✓] Error handling is implemented correctly  
+- [✓] No obvious bugs or logic errors  
 
 ### Code Standards
-- [ ] Follows project naming conventions
-- [✓] Functions are small and focused (single responsibility)
-- [ ] No hardcoded values (uses constants/environment variables)
-- [✓] No commented-out code left in
-- [✓] No debug statements left in (console.log, print, etc.)
-
+- [✓] Functions are small and focused (single responsibility)  
+- [✓] Environment variables used where appropriate  
+- [✓] No commented-out code left in  
+- [✓] No debug statements left in  
 
 ### Documentation
-- [ ] Functions have appropriate comments where needed
-- [ ] Complex logic is explained with inline comments
-- [✓] README updated if new features added
-- [ ] API documentation updated if endpoints changed
-
+- [✓] README updated for Docker and CI/CD setup  
+- [✓] API documentation unchanged (no endpoint changes)  
 
 ### Testing
-- [ ] Unit tests added for new functionality
-- [✓] Existing tests still pass
-- [ ] Edge cases covered in tests
-- [✓] Test names clearly describe what is being tested
-
+- [✓] Automated tests added (functional, non-functional, smoke)  
+- [✓] Existing tests still pass  
+- [✓] Test names clearly describe behavior being tested  
 
 ### Security
-- [✓] No sensitive data exposed (passwords, keys, tokens)
-- [✓] Input validation implemented
-- [✓] No SQL injection vulnerabilities
-- [✓] No XSS vulnerabilities
-
+- [✓] No sensitive data exposed  
+- [✓] Input validation implemented  
+- [✓] No SQL injection or XSS vulnerabilities  
 
 ---
-
 
 ## 3. Review Findings
 
-
 ### ✅ Approved Items
-|         Item        | Notes |
-|---------------------|-------|
-|      test files     |       |
-|---------------------|-------|
-| github actions fils |       |
-|---------------------|-------|
-|     docker files    |       |
-
+| Item | Notes |
+|------|------|
+| Docker & CI/CD setup | Implemented correctly |
+| Automated tests | All required categories covered |
 
 ### ⚠️ Suggestions (Non-blocking)
-| File:Line |     Suggestion      |
-|-----------|---------------------|
-| tests:all | add inline comments |
-
+| File | Suggestion |
+|------|------------|
+| tests/* | Add inline comments for clarity |
 
 ### ❌ Required Changes (Blocking)
-| File:Line | Issue | Severity |
-|-----------|-------|----------|
-|           |       |          |
-
+| None | — | — |
 
 ---
-
 
 ## 4. Testing Verification
 
-
 ### Tests Run
-- [✅] Unit tests - Passed ✅ / Failed ❌
-- [✅] Integration tests - Passed ✅ / Failed ❌
-- [✅] Linting - Passed ✅ / Failed ❌
-
+- [✓] Automated backend tests (Jest) — Passed  
+- [✓] CI workflow — Passed  
 
 ### Manual Testing
-- [✓] Feature tested locally
-- [✓] Tested in staging environment (if applicable)
-- [✓] No regressions observed
-
+- [✓] Tested locally  
+- [✓] Tested in staging environment  
+- [✓] No regressions observed  
 
 ---
-
 
 ## 5. Final Decision
 
+**Decision:** [✓] APPROVED  
 
-**Decision:** [✓] APPROVED / [ ] REQUEST CHANGES / [ ] NEEDS DISCUSSION
-
-
-**Comments:**
-> [improve documntation other then that fine]
-
+**Comments:**  
+Minor documentation improvements recommended; otherwise implementation is correct.
 
 ---
 
+**Reviewer Signature:** Kalvin
+**Date:** December 14, 2025
 
-**Reviewer Signature:** Kalvin Kobe Cusworth
-**Date:** 2025-12-14
+---
+
