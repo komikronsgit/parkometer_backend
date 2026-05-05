@@ -1,10 +1,10 @@
 [
   {
-    "_id": "6930e6fadfc23e6a2a560967",
-    "name": "Right Entrance Parking Lot",
-    "description": "The parking lot is beside the GO bus stop and has a 5-minute walk to the J Wing building and an 8-minute walk to the S Wing building.",
-    "lat": 43.470258,
-    "lng": -79.697635,
+    "_id": "6930e6fadfc23e6a2a560973",
+    "name": "Main Entrance Parking Lot",
+    "description": "The parking lot is a 3-minute walk to the main school entrance. It also leads to the D Wing building.",
+    "lat": 43.469887,
+    "lng": -79.700785,
     "availableSpace": 8,
     "totalSpace": 8,
     "handicapParking": "Yes",
@@ -19,6 +19,17 @@
     "availableSpace": 8,
     "totalSpace": 8,
     "handicapParking": "No",
+    "__v": 0
+  },
+  {
+    "_id": "6930e6fadfc23e6a2a560967",
+    "name": "Right Entrance Parking Lot",
+    "description": "The parking lot is beside the GO bus stop and has a 5-minute walk to the J Wing building and an 8-minute walk to the S Wing building.",
+    "lat": 43.470258,
+    "lng": -79.697635,
+    "availableSpace": 8,
+    "totalSpace": 8,
+    "handicapParking": "Yes",
     "__v": 0
   },
   {
@@ -41,17 +52,6 @@
     "availableSpace": 8,
     "totalSpace": 8,
     "handicapParking": "No",
-    "__v": 0
-  },
-  {
-    "_id": "6930e6fadfc23e6a2a560973",
-    "name": "Main Entrance Parking Lot",
-    "description": "The parking lot is a 3-minute walk to the main school entrance. It also leads to the D Wing building.",
-    "lat": 43.469887,
-    "lng": -79.700785,
-    "availableSpace": 8,
-    "totalSpace": 8,
-    "handicapParking": "Yes",
     "__v": 0
   },
   {

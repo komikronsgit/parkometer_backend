@@ -26,8 +26,8 @@ export const getLots = async (req: Request, res: Response) => {
       data.map(async (lot) => {
         const activeReservations = await Reservation.countDocuments({
           lotName: lot.name,
-          startTime: { $lt: now },
-          endTime: { $gt: now },
+          startTime: { $gt: now },
+          endTime: { $lt: now },
         });
 
         lot.availableSpace = lot.totalSpace - activeReservations;
