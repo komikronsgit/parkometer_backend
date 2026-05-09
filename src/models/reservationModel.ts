@@ -13,6 +13,10 @@ export default mongoose.model("reservations", new mongoose.Schema({
     type: String,
     required: true
   },
+  plate: {
+    type: String,
+    required: true
+  },
   startTime: {
     type: Date,
     required: true
