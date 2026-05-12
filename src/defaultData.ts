@@ -28,8 +28,7 @@ export const initializeDefaultData = async () => {
         name: "admin",
         password: "admin",
         email: "admin",
-        phone: "admin",
-        plate: "admin"
+        phone: "admin"
       });
       await adminUser.save();
     }

@@ -17,9 +17,5 @@ export default mongoose.model("users", new mongoose.Schema({
   phone: {
     type: String,
     required: false,
-  },
-  plate: {
-    type: String,
-    required: false,
   }
 }));
